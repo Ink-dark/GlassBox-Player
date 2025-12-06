@@ -1,0 +1,26 @@
+{
+  "name": "glassbox-player",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "electron:dev": "concurrently -k \"npm run dev\" \"npm run electron:start\"",
+    "electron:start": "electron .",
+    "electron:build": "vue-tsc && vite build && electron-builder"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "concurrently": "^8.2.2",
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5",
+    "vue-tsc": "^2.1.10"
+  }
+}
